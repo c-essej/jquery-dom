@@ -94,18 +94,26 @@
   $('aside').html('<p> Apologies! </p>')
 
   // Question 6
-  function updateBodyColor() {
+  function updateBodyColor(evt) {
     console.log('updateBodyColor called');
-    const $colorInput = $('input').val();
+    const $colorInput = $('input');
     console.log($colorInput);
-    // const r = $colorInput.val();
-    // const g = $colorInput[1].val();
-    // const b = $colorInput[2].val();
+    const r = $colorInput.eq(0).val();
+    const g = $colorInput.eq(1).val();
+    const b = $colorInput.eq(2).val();
     console.log(`rgb(${r},${g},${b});`);
-    $('body').css("background-color", `rgb(${r},${g},${b});`);
+
+    $('body').css("background-color", `rgb(${r},${g},${b})`);
   }
 
   $('input').on("change",updateBodyColor);
+
+  //Question 7
+  function removeImage(evt){
+    $('event.delegateTarget').remove();
+  }
+
+  $('img').on('click', removeImage);
 
 
 

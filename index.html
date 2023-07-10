@@ -110,7 +110,8 @@
 
   //Question 7
   function removeImage(evt){
-    $('event.delegateTarget').remove();
+    console.log('removeImage');
+    const $target = $(evt.target);
   }
 
   $('img').on('click', removeImage);

@@ -74,7 +74,21 @@
 </div>
 <script src="https://unpkg.com/jquery"></script>
 <script>
+  "use strict";
   // Add your code here!
+  $('article').addClass('image-center');
+
+  $('article p:last-child').remove();
+
+  $('#title').css('font-size', Math.random() * 100);
+
+  const $newListItem = $('<li>').text('Another dog!');
+    $('ol').append($newListItem);
+
+  $('aside').html('<p> Apologies! </p>')
+
+
+
 </script>
 </body>
 

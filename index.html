@@ -75,17 +75,37 @@
 <script src="https://unpkg.com/jquery"></script>
 <script>
   "use strict";
-  // Add your code here!
+
+  // Question 1
   $('article').addClass('image-center');
 
+  //Question 2
   $('article p:last-child').remove();
 
+  //Question 3
   $('#title').css('font-size', Math.random() * 100);
 
+  //Question 4
   const $newListItem = $('<li>').text('Another dog!');
     $('ol').append($newListItem);
 
+
+  //Question 5
   $('aside').html('<p> Apologies! </p>')
+
+  // Question 6
+  function updateBodyColor() {
+    console.log('updateBodyColor called');
+    const $colorInput = $('input').val();
+    console.log($colorInput);
+    // const r = $colorInput.val();
+    // const g = $colorInput[1].val();
+    // const b = $colorInput[2].val();
+    console.log(`rgb(${r},${g},${b});`);
+    $('body').css("background-color", `rgb(${r},${g},${b});`);
+  }
+
+  $('input').on("change",updateBodyColor);
 
 
 

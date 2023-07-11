@@ -6,13 +6,17 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="movie-container">
+
   <form>
-    <label for="form-title">Title</label><input id="form-title" type="text">
-    <label for="form-rating">Rating</label><input id="form-rating" type="text">
+    <label for="form-title">Title</label><input id="form-title" type="text" minlength="2">
+    <label for="form-rating">Rating</label><input id="form-rating" type="number" min="0" max="10">
     <button id="form-submit">Submit</button>
   </form>
-</div>
+  <button id="sort-title"> Sort by Title </button>
+  <button id="sort-rating"> Sort by Rating </button>
+
+  <div id="movie-container"></div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 <script src="movie-script.js"></script>
